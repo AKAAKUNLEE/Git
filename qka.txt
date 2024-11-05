@@ -1,0 +1,29 @@
+sys:comment     #注释
+sys:group       #步骤组
+sys:simpleIf    #如果
+sys:assign      #赋值
+sys:stop        #停止
+sys:subprogram  #子程序
+var:markDown    #内容
+var:title       #标题
+var:width       #宽度
+stopIfFail      #失败停止   变量0为失败，1为成功
+skipDebugOutput #跳过调试输出 变量false为不跳过，true为跳过
+OutputParams    #输出参数  
+# 变量
+var:title       #标题
+var:width       #宽度
+var:markDown    #内容
+# 步骤组
+sys:group       #步骤组
+# 子程序
+sys:subprogram  #子程序
+# 注释
+sys:comment     #注释
+# 停止
+sys:stop        #停止
+# 赋值
+sys:assign      #赋值
+# 如果
+sys:simpleIf    #如果
+# 调试输出
