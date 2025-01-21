@@ -36,3 +36,6 @@ if %errorlevel% neq 0 (
     pause
     exit /b
 )
+
+REM 保持窗口打开并允许继续输入命令
+cmd /k
