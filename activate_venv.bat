@@ -1,20 +1,20 @@
 @echo off
 
-REM æ£€æŸ¥ Python-VENV è™šæ‹ŸçŽ¯å¢ƒæ˜¯å¦å­˜åœ¨
+REM ¼ì²é Python-VENV ÐéÄâ»·¾³ÊÇ·ñ´æÔÚ
 if not exist "Python-VENV\Scripts\activate" (
-    echo æ— æ³•æ‰¾åˆ° Python-VENV è™šæ‹ŸçŽ¯å¢ƒã€‚
+    echo ÎÞ·¨ÕÒµ½ Python-VENV ÐéÄâ»·¾³¡£
     pause
     exit /b
 )
 
-REM æ¿€æ´» Python-VENV è™šæ‹ŸçŽ¯å¢ƒ
+REM ¼¤»î Python-VENV ÐéÄâ»·¾³
 call Python-VENV\Scripts\activate
 if %errorlevel% neq 0 (
-    echo æ¿€æ´»è™šæ‹ŸçŽ¯å¢ƒå¤±è´¥ã€‚
+    echo ¼¤»îÐéÄâ»·¾³Ê§°Ü¡£
     pause
     exit /b
 ) else (
-    echo è™šæ‹ŸçŽ¯å¢ƒ Python-VENV å·²æ¿€æ´»ã€‚
+    echo ÐéÄâ»·¾³ Python-VENV ÒÑ¼¤»î¡£
 )
-REM ä¿æŒçª—å£æ‰“å¼€å¹¶å…è®¸ç»§ç»­è¾“å…¥å‘½ä»¤
+REM ±£³Ö´°¿Ú´ò¿ª²¢ÔÊÐí¼ÌÐøÊäÈëÃüÁî
 cmd /k
