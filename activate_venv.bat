@@ -1,41 +1,20 @@
 @echo off
 
-REM ¼ì²é Python-VENV ĞéÄâ»·¾³ÊÇ·ñ´æÔÚ
+REM æ£€æŸ¥ Python-VENV è™šæ‹Ÿç¯å¢ƒæ˜¯å¦å­˜åœ¨
 if not exist "Python-VENV\Scripts\activate" (
-    echo ÎŞ·¨ÕÒµ½ Python-VENV ĞéÄâ»·¾³¡£
+    echo æ— æ³•æ‰¾åˆ° Python-VENV è™šæ‹Ÿç¯å¢ƒã€‚
     pause
     exit /b
 )
 
-REM ¼¤»î Python-VENV ĞéÄâ»·¾³
+REM æ¿€æ´» Python-VENV è™šæ‹Ÿç¯å¢ƒ
 call Python-VENV\Scripts\activate
 if %errorlevel% neq 0 (
-    echo ¼¤»îĞéÄâ»·¾³Ê§°Ü¡£
+    echo æ¿€æ´»è™šæ‹Ÿç¯å¢ƒå¤±è´¥ã€‚
     pause
     exit /b
 ) else (
-    echo ĞéÄâ»·¾³ Python-VENV ÒÑ¼¤»î¡£
+    echo è™šæ‹Ÿç¯å¢ƒ Python-VENV å·²æ¿€æ´»ã€‚
 )
-
-REM ¼ì²â²¢¸üĞÂpip°æ±¾
-pip install --upgrade pip --dry-run >nul 2>&1
-if %errorlevel% neq 0 (
-    echo pipÒÑ¾­ÊÇ×îĞÂ°æ±¾¡£
-) else (
-    echo ¸üĞÂpipµ½×îĞÂ°æ±¾¡£
-    pip install --upgrade pip
-)
-
-REM °²×°pyinstaller£¨Èç¹ûÉĞÎ´°²×°£©
-pip install pyinstaller
-
-REM ¼ì²éPyInstallerÊÇ·ñ´æÔÚ
-where pyinstaller >nul 2>&1
-if %errorlevel% neq 0 (
-    echo PyInstaller Î´°²×°¡£ÇëÔËĞĞ£ºpip install pyinstaller
-    pause
-    exit /b
-)
-
-REM ±£³Ö´°¿Ú´ò¿ª²¢ÔÊĞí¼ÌĞøÊäÈëÃüÁî
+REM ä¿æŒçª—å£æ‰“å¼€å¹¶å…è®¸ç»§ç»­è¾“å…¥å‘½ä»¤
 cmd /k
