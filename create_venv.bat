@@ -1,25 +1,26 @@
-REM ä¿æŒçª—å£æ‰“å¼€å¹¶å…è®¸ç»§ç»­è¾“å…¥å‘½ä»¤
+@echo off
+
+REM ±£³Ö´°¿Ú´ò¿ª²¢ÔÊÐí¼ÌÐøÊäÈëÃüÁî
 cmd /k
 
-@echo off
-REM è®¾ç½®Pythonè§£é‡Šå™¨è·¯å¾„ï¼Œå¦‚æžœPythonä¸åœ¨PATHä¸­ï¼Œè¯·æŒ‡å®šPythonçš„å®Œæ•´è·¯å¾„
+REM ÉèÖÃPython½âÊÍÆ÷Â·¾¶£¬Èç¹ûPython²»ÔÚPATHÖÐ£¬ÇëÖ¸¶¨PythonµÄÍêÕûÂ·¾¶
 set PYTHON_EXE=python
  
-REM æ£€æŸ¥æ˜¯å¦å·²ç»å­˜åœ¨åä¸º666çš„è™šæ‹ŸçŽ¯å¢ƒ
+REM ¼ì²éÊÇ·ñÒÑ¾­´æÔÚÃûÎª666µÄÐéÄâ»·¾³
 if exist "Python-VENV" (
-    echo è™šæ‹ŸçŽ¯å¢ƒ Python-VENV å·²ç»å­˜åœ¨ã€‚
+    echo ÐéÄâ»·¾³ Python-VENV ÒÑ¾­´æÔÚ¡£
     pause
     exit /b
 )
  
-REM åˆ›å»ºè™šæ‹ŸçŽ¯å¢ƒ
+REM ´´½¨ÐéÄâ»·¾³
 %PYTHON_EXE% -m venv Python-VENV
 if %errorlevel% neq 0 (
-    echo åˆ›å»ºè™šæ‹ŸçŽ¯å¢ƒå¤±è´¥ã€‚
+    echo ´´½¨ÐéÄâ»·¾³Ê§°Ü¡£
     pause
     exit /b
 ) else (
-    echo è™šæ‹ŸçŽ¯å¢ƒ Python-VENV åˆ›å»ºæˆåŠŸã€‚
+    echo ÐéÄâ»·¾³ Python-VENV ´´½¨³É¹¦¡£
     pause
 )
 

@@ -1,29 +1,29 @@
 @echo off
  
-REM æ£€æŸ¥666è™šæ‹Ÿç¯å¢ƒæ˜¯å¦å­˜åœ¨
+REM ¼ì²é666ĞéÄâ»·¾³ÊÇ·ñ´æÔÚ
 if not exist "Python-VENV\Scripts\activate" (
-    echo æ— æ³•æ‰¾åˆ° Python-VENV è™šæ‹Ÿç¯å¢ƒã€‚
+    echo ÎŞ·¨ÕÒµ½ Python-VENV ĞéÄâ»·¾³¡£
     pause
     exit /b
 )
  
-REM æ¿€æ´»666è™šæ‹Ÿç¯å¢ƒ
+REM ¼¤»î666ĞéÄâ»·¾³
 call Python-VENV\Scripts\activate
 if %errorlevel% neq 0 (
-    echo æ¿€æ´»è™šæ‹Ÿç¯å¢ƒå¤±è´¥ã€‚
+    echo ¼¤»îĞéÄâ»·¾³Ê§°Ü¡£
     pause
     exit /b
 ) else (
-    echo è™šæ‹Ÿç¯å¢ƒ Python-VENV å·²æ¿€æ´»ã€‚
+    echo ĞéÄâ»·¾³ Python-VENV ÒÑ¼¤»î¡£
 )
  
-REM å®‰è£…pyinstallerï¼ˆå¦‚æœå°šæœªå®‰è£…ï¼‰
+REM °²×°pyinstaller£¨Èç¹ûÉĞÎ´°²×°£©
 pip install pyinstaller
   
-REM æ£€æŸ¥PyInstalleræ˜¯å¦å­˜åœ¨
+REM ¼ì²éPyInstallerÊÇ·ñ´æÔÚ
 where pyinstaller >nul 2>&1
 if %errorlevel% neq 0 (
-    echo PyInstaller æœªå®‰è£…ã€‚è¯·è¿è¡Œï¼špip install pyinstaller
+    echo PyInstaller Î´°²×°¡£ÇëÔËĞĞ£ºpip install pyinstaller
     pause
     exit /b
 )
