@@ -1,0 +1,19 @@
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/65379fc6000000002402d595
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/653742d4000000002402ef20
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/653648e2000000002201d5ce
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/6535e04f000000002201d2aa
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/6534fe01000000002402e9fb
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/65347ea100000000230380c0
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/6533aac90000000025021b6c
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/6533331f000000002500a04b
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/6532756b0000000023038456
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/6531f70f000000002402fc36
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/6531092e0000000025016db9
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/65309e4a0000000025021818
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/652fc8e9000000002202fcc8
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/652deddd000000001c015bfd
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/652c9f1c000000001a0146dc
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/652bc6ef0000000023019ea1
+https://www.xiaohongshu.com/user/profile/63da137c0000000026004adf/652b48a9000000001a016a87
+        with open('xhs.txt', 'w') as file:
+            file.write(str(xhs))

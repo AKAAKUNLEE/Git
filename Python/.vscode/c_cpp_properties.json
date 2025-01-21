@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "f:/Git/python/libRich",
+                "c:/Users/ASUS/.vscode/extensions/richintelligent.richextension-1.2.4/include/C51",
+                "c:/Users/ASUS/.vscode/extensions/richintelligent.richextension-1.2.4/include/C51/Atmel"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "cStandard": "c89",
+            "forcedInclude": [
+                "f:/Git/python/libRich/libRichForced.h"
+            ]
+        }
+    ],
+    "version": 4
+}
