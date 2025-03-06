@@ -74,15 +74,18 @@ label_key.grid(column=0, row=0, sticky=tk.W)
 entry_key = ttk.Entry(frame, width=40)
 entry_key.grid(column=1, row=0, sticky=tk.EW)
 
-# 添加按钮
-button_paste = ttk.Button(frame, text="读取剪切板", command=paste_from_clipboard)
-button_paste.grid(column=2, row=0, padx=5)
+# 将所有按钮放在同一行
+button_frame = ttk.Frame(frame)
+button_frame.grid(column=0, row=1, columnspan=4, pady=10)
 
-button_clear = ttk.Button(frame, text="清空输入", command=clear_input)
-button_clear.grid(column=3, row=0, padx=5)
+button_paste = ttk.Button(button_frame, text="读取剪切板", command=paste_from_clipboard)
+button_paste.pack(side=tk.LEFT, padx=5)
 
-button_fetch = ttk.Button(frame, text="获取数据", command=fetch_data)
-button_fetch.grid(column=0, row=1, columnspan=4, pady=10)
+button_clear = ttk.Button(button_frame, text="清空输入", command=clear_input)
+button_clear.pack(side=tk.LEFT, padx=5)
+
+button_fetch = ttk.Button(button_frame, text="获取数据", command=fetch_data)
+button_fetch.pack(side=tk.LEFT, padx=5)
 
 result_text = tk.Text(frame, wrap=tk.WORD, height=15)
 result_text.grid(column=0, row=2, columnspan=4, sticky=tk.EW)
