@@ -20,11 +20,23 @@ class APIToolboxApp:
         except ImportError:
             print("ttkthemes 未安装，使用默认主题")
 
-        self.create_widgets()
+        # 创建多页面的Notebook
+        self.notebook = ttk.Notebook(self.root)
+        self.notebook.pack(fill=tk.BOTH, expand=True)
 
-    def create_widgets(self):
-        """创建GUI控件"""
-        frame = ttk.Frame(self.root, padding="10")
+        # 第一页：API工具箱
+        self.page_api = ttk.Frame(self.notebook)
+        self.notebook.add(self.page_api, text="API工具箱")
+        self.create_api_toolbox_page(self.page_api)
+
+        # 第二页：新页面（内容待定）
+        self.page_new = ttk.Frame(self.notebook)
+        self.notebook.add(self.page_new, text="新页面")
+        self.create_new_page(self.page_new)
+
+    def create_api_toolbox_page(self, parent):
+        """创建API工具箱页面"""
+        frame = ttk.Frame(parent, padding="10")
         frame.pack(fill=tk.BOTH, expand=True)
 
         # 输入框和标签
@@ -54,6 +66,14 @@ class APIToolboxApp:
         # 设置窗口布局
         frame.columnconfigure(1, weight=1)
         frame.rowconfigure(2, weight=1)
+
+    def create_new_page(self, parent):
+        """创建新页面（内容待定）"""
+        frame = ttk.Frame(parent, padding="10")
+        frame.pack(fill=tk.BOTH, expand=True)
+
+        label = ttk.Label(frame, text="这里是新页面，内容待定")
+        label.pack(pady=20)
 
     def on_paste(self):
         """读取剪切板内容到输入框"""
