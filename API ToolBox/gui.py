@@ -1,5 +1,4 @@
 import tkinter as tk
-from tkinter import ttk
 from api_page import APIPage
 from new_page import NewPage
 
@@ -21,7 +20,7 @@ class APIToolboxApp:
             print("ttkthemes 未安装，使用默认主题")
 
         # 创建多页面的Notebook
-        self.notebook = ttk.Notebook(self.root)
+        self.notebook = tk.ttk.Notebook(self.root)
         self.notebook.pack(fill=tk.BOTH, expand=True)
 
         # 第一页：提取网页链接

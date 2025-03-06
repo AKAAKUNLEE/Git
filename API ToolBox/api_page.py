@@ -1,10 +1,11 @@
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk  # 显式导入 ttk 模块
+from tkinter import messagebox
 from api_handler import fetch_data
 from clipboard_handler import paste_from_clipboard
 
 
-class APIPage(ttk.Frame):
+class APIPage(tk.ttk.Frame):
     def __init__(self, parent):
         super().__init__(parent, padding="10")
         self.pack(fill=tk.BOTH, expand=True)
@@ -13,23 +14,23 @@ class APIPage(ttk.Frame):
     def create_widgets(self):
         """创建提取网页链接页面控件"""
         # 输入框和标签
-        label_key = ttk.Label(self, text="要提取的网页链接:")
+        label_key = tk.ttk.Label(self, text="要提取的网页链接:")
         label_key.grid(column=0, row=0, sticky=tk.W)
 
-        self.entry_key = ttk.Entry(self, width=40)
+        self.entry_key = tk.ttk.Entry(self, width=40)
         self.entry_key.grid(column=1, row=0, sticky=tk.EW)
 
         # 按钮在同一行
-        button_frame = ttk.Frame(self)
+        button_frame = tk.ttk.Frame(self)
         button_frame.grid(column=0, row=1, columnspan=4, pady=10)
 
-        button_paste = ttk.Button(button_frame, text="读取剪切板", command=self.on_paste)
+        button_paste = tk.ttk.Button(button_frame, text="读取剪切板", command=self.on_paste)
         button_paste.pack(side=tk.LEFT, padx=5)
 
-        button_clear = ttk.Button(button_frame, text="清空输入", command=self.on_clear)
+        button_clear = tk.ttk.Button(button_frame, text="清空输入", command=self.on_clear)
         button_clear.pack(side=tk.LEFT, padx=5)
 
-        button_fetch = ttk.Button(button_frame, text="获取数据", command=self.on_fetch)
+        button_fetch = tk.ttk.Button(button_frame, text="获取数据", command=self.on_fetch)
         button_fetch.pack(side=tk.LEFT, padx=5)
 
         # 结果显示框
