@@ -14,3 +14,21 @@ def fetch_data(key):
             return f"请求失败，状态码：{response.status_code}"
     except requests.RequestException as e:
         return f"请求异常：{e}"
+
+
+def parse_watermark(appid, link):
+    """调用短视频去水印API"""
+    API_URL = "https://watermark-api.hlyphp.top/Watermark/Index"
+    params = {
+        "appid": appid,
+        "link": link
+    }
+
+    try:
+        response = requests.post(API_URL, params=params)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return f"请求失败，状态码：{response.status_code}"
+    except requests.RequestException as e:
+        return f"请求异常：{e}"

@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk  # 显式导入 ttk 模块
 from api_page import APIPage
 from new_page import NewPage
 
@@ -27,6 +28,6 @@ class APIToolboxApp:
         self.api_page = APIPage(self.notebook)
         self.notebook.add(self.api_page, text="提取网页链接")
 
-        # 第二页：新页面（内容待定）
+        # 第二页：新页面（短视频去水印）
         self.new_page = NewPage(self.notebook)
-        self.notebook.add(self.new_page, text="新页面")
+        self.notebook.add(self.new_page, text="短视频去水印")
