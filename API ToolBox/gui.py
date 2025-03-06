@@ -7,7 +7,7 @@ from clipboard_handler import paste_from_clipboard
 class APIToolboxApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("API工具箱")
+        self.root.title("提取网页链接")
         self.root.geometry("500x400")
 
         # 设置主题 (需要安装 ttkthemes)
@@ -15,7 +15,7 @@ class APIToolboxApp:
             from ttkthemes import ThemedTk
 
             self.root = ThemedTk(theme="arc")  # 使用 'arc' 主题，可以根据需要更换
-            self.root.title("API工具箱 (支持主题)")
+            self.root.title("提取网页链接 (支持主题)")
             self.root.geometry("500x400")
         except ImportError:
             print("ttkthemes 未安装，使用默认主题")
@@ -24,9 +24,9 @@ class APIToolboxApp:
         self.notebook = ttk.Notebook(self.root)
         self.notebook.pack(fill=tk.BOTH, expand=True)
 
-        # 第一页：API工具箱
+        # 第一页：提取网页链接
         self.page_api = ttk.Frame(self.notebook)
-        self.notebook.add(self.page_api, text="API工具箱")
+        self.notebook.add(self.page_api, text="提取网页链接")
         self.create_api_toolbox_page(self.page_api)
 
         # 第二页：新页面（内容待定）
@@ -35,7 +35,7 @@ class APIToolboxApp:
         self.create_new_page(self.page_new)
 
     def create_api_toolbox_page(self, parent):
-        """创建API工具箱页面"""
+        """创建提取网页链接页面"""
         frame = ttk.Frame(parent, padding="10")
         frame.pack(fill=tk.BOTH, expand=True)
 
