@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 import requests
+import pyperclip  # 用于操作剪切板
 
 # API URL
 API_URL = "https://api.okcode.vip/api/dev/html_link"
@@ -33,6 +34,21 @@ def fetch_data():
         messagebox.showerror("错误", f"请求异常：{e}")
 
 
+def paste_from_clipboard():
+    """从剪切板粘贴内容到输入框"""
+    try:
+        clipboard_text = pyperclip.paste()  # 获取剪切板内容
+        entry_key.delete(0, tk.END)  # 清空输入框
+        entry_key.insert(0, clipboard_text)  # 粘贴内容
+    except Exception as e:
+        messagebox.showerror("错误", f"读取剪切板失败：{e}")
+
+
+def clear_input():
+    """清空输入框"""
+    entry_key.delete(0, tk.END)
+
+
 # 创建主窗口
 root = tk.Tk()
 root.title("API工具箱")
@@ -58,11 +74,18 @@ label_key.grid(column=0, row=0, sticky=tk.W)
 entry_key = ttk.Entry(frame, width=40)
 entry_key.grid(column=1, row=0, sticky=tk.EW)
 
+# 添加按钮
+button_paste = ttk.Button(frame, text="读取剪切板", command=paste_from_clipboard)
+button_paste.grid(column=2, row=0, padx=5)
+
+button_clear = ttk.Button(frame, text="清空输入", command=clear_input)
+button_clear.grid(column=3, row=0, padx=5)
+
 button_fetch = ttk.Button(frame, text="获取数据", command=fetch_data)
-button_fetch.grid(column=0, row=1, columnspan=2, pady=10)
+button_fetch.grid(column=0, row=1, columnspan=4, pady=10)
 
 result_text = tk.Text(frame, wrap=tk.WORD, height=15)
-result_text.grid(column=0, row=2, columnspan=2, sticky=tk.EW)
+result_text.grid(column=0, row=2, columnspan=4, sticky=tk.EW)
 
 # 设置窗口布局
 frame.columnconfigure(1, weight=1)
